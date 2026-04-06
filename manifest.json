@@ -1,0 +1,59 @@
+{
+  "name": "socketsio-google-ai-toolkit",
+  "display_name": "SocketsIO Google AI Toolkit",
+  "version": "1.0.0",
+  "description": "Full-stack Google AI toolkit: Translation (195 languages), OCR (Vision API), Text-to-Speech, and Sentiment Analysis — all via SocketsIO's unified API.",
+  "author": "SocketsIO",
+  "homepage": "https://socketsio.com",
+  "license": "MIT",
+  "tools": [
+    {
+      "name": "translate",
+      "description": "Translate text to any of 195 languages (Google Cloud Translation)",
+      "pricing": "$0.005/call"
+    },
+    {
+      "name": "detect",
+      "description": "Detect the language of text",
+      "pricing": "$0.002/call"
+    },
+    {
+      "name": "languages",
+      "description": "List all 195 supported languages",
+      "pricing": "free"
+    },
+    {
+      "name": "bulk_translate",
+      "description": "Translate up to 128 texts in one call",
+      "pricing": "$0.005/call + $0.001/extra text"
+    },
+    {
+      "name": "ocr",
+      "description": "Extract text from images using Google Cloud Vision API",
+      "pricing": "$0.01/call"
+    },
+    {
+      "name": "text_to_speech",
+      "description": "Convert text to audio using Google Cloud TTS (returns base64 MP3)",
+      "pricing": "$0.01/call"
+    },
+    {
+      "name": "analyze_sentiment",
+      "description": "Analyze text sentiment using Google Cloud Natural Language API",
+      "pricing": "$0.005/call"
+    }
+  ],
+  "env": {
+    "SOCKETSIO_API_KEY": {
+      "required": true,
+      "description": "Your SocketsIO API key. Get one free at https://socketsio.com/signup"
+    },
+    "SOCKETSIO_API_BASE": {
+      "required": false,
+      "default": "https://api.socketsio.com",
+      "description": "API base URL (optional, for self-hosted or local testing)"
+    }
+  },
+  "tags": ["translation", "ocr", "vision", "tts", "text-to-speech", "sentiment", "nlp", "google-cloud", "ai", "language"],
+  "categories": ["language", "vision", "audio", "ai"]
+}

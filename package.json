@@ -1,0 +1,30 @@
+{
+  "name": "@socketsio/mcp-google-ai-toolkit",
+  "version": "1.0.0",
+  "description": "SocketsIO Google AI Toolkit MCP Server — Translation, OCR, Text-to-Speech, and Sentiment Analysis via Google Cloud APIs",
+  "keywords": ["mcp", "translation", "ocr", "vision", "tts", "text-to-speech", "sentiment", "nlp", "google-cloud", "ai", "fastmcp"],
+  "homepage": "https://socketsio.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/socketsio/mcp-google-ai-toolkit"
+  },
+  "license": "MIT",
+  "author": "SocketsIO <hello@socketsio.com>",
+  "bin": {
+    "mcp-google-ai-toolkit": "./bin/mcp-google-ai-toolkit.js"
+  },
+  "files": [
+    "bin/",
+    "server.py",
+    "requirements.txt",
+    "README.md",
+    "manifest.json"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "start": "node bin/mcp-google-ai-toolkit.js",
+    "postinstall": "node bin/check-python.js"
+  }
+}
