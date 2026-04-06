@@ -1,0 +1,26 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required:
+      - apiKey
+    properties:
+      apiKey:
+        type: string
+        title: SocketsIO API Key
+        description: Your SocketsIO API key. Get one free at https://socketsio.com/signup
+      apiBase:
+        type: string
+        title: API Base URL
+        default: https://api.socketsio.com
+        description: API base URL (optional)
+  commandFunction:
+    |-
+    (config) => ({
+      command: 'python3',
+      args: ['server.py'],
+      env: {
+        SOCKETSIO_API_KEY: config.apiKey,
+        SOCKETSIO_API_BASE: config.apiBase || 'https://api.socketsio.com'
+      }
+    })
